@@ -14,6 +14,10 @@ const appRoutes: Routes = [
     {
         path: 'todo',
         component: TodoDetailComponent
+    },
+    {
+        path: 'todo/:id',
+        component: TodoDetailComponent
     }
 ];
 

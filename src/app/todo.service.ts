@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {Todo} from "./todo";
+import {TodoManager} from "./todo-data";
 
 @Injectable()
 export class TodoService {
     lastId: number = 0;
-    todos: Todo[] = [];
+    todos: Todo[] = TodoManager.getInstance().getTodoes();
 
     constructor() {
+        console.log('TodoService: Constructor');
     }
 
     addTodo(todo: Todo): TodoService {

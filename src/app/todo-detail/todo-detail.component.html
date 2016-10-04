@@ -1,4 +1,10 @@
 <h1 class="title_details">
-  Title
-  {{todo.title}}
+    Todo Details
 </h1>
+<section class="detail_content">
+    <section class="detail" *ngIf="todo">
+        <h3>{{todo.title}}</h3>
+    </section>
+    <button class="btn-back" routerLink="/">Back</button>
+</section>
+
